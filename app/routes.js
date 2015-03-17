@@ -8,7 +8,7 @@ module.exports = function(match) {
   });
 
   match('/posts', function(callback) {
-    console.log('posts');
+    // console.log('posts');
 
     apiClient.get('/posts.json', function(err, res) {
       if (err) return callback(err);
@@ -19,7 +19,7 @@ module.exports = function(match) {
   });
 
   match('/post/:id', function(id, callback) {
-    console.log('post: ' + id);
+    // console.log('post: ' + id);
 
     apiClient.get('/posts/' + id + '.json', function(err, res) {
       if (err) return callback(err);
